@@ -1,0 +1,3 @@
+[t,x,v,a] = a4gedschwingung(... 
+            [0,30], 4000, [-2,0.0], 1.2, 0.2 );
+plot(t,x,t,v,t,a,'LineWidth',1.5)

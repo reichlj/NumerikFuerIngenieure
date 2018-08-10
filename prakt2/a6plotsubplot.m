@@ -1,0 +1,20 @@
+clear
+x = 0:pi/100:2*pi;
+subplot(2,3,1);  
+plot(x, sin(x),'LineWidth',1.5);    
+title('Fig 1');
+subplot(2,3,2);  
+plot(x, cos(x),'LineWidth',1.5);    
+title('Fig 2');
+subplot(2,3,3);  
+plot(x, x,'LineWidth',1.5);         
+title('Fig 3');
+subplot(2,3,4);  
+plot(x, x.*x,'LineWidth',1.5);      
+title('Fig 4');
+subplot(2,3,6);  
+plot(x, -x,'LineWidth',1.5);        
+title('Fig 6');
+subplot(2,3,5);  
+plot(x, x.*sin(x),'LineWidth',1.5); 
+title('Fig 5');
