@@ -12,4 +12,4 @@ for w=5:35
     fprintf('%6.0f%8.3f\n',w,F);
 end
 fprintf('Minimum: w=%3.0f Kraft=%8.3f\n',wmin,fmin);
-fprintf('Mittelwert der Kraefte: %8.3f\n',fsum/31);
+fprintf('Mittelwert der Kräfte: %8.3f\n',fsum/31);
