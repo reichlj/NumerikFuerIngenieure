@@ -6,7 +6,7 @@ b = [3; 4]
 
 disp('Determinante von A')
 d = det(A)
-x = A\b
-disp('Probe: A*x=b')
+x = A\b   %x=mldivide(A,b)
+disp('Probe: b1=A*x')
 b1 = A*x
 fprintf('%.16f\n',b1)

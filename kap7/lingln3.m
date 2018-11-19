@@ -6,11 +6,11 @@ b = [0; 2; 0.5]
 disp('Gleichungsystem lösen')
 x = A\b
 
-disp('Probe: A*x=b')
+disp('Probe: b1=A*x')
 b1=A*x
 
 disp('Gleichungssystem lösen')
 x1 = mldivide(A,b)
 
-disp('Probe: A*x1=b')
+disp('Probe: b1 = A*x1')
 b1=A*x1
