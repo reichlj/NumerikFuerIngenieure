@@ -25,8 +25,8 @@ b = (1./w) .* (V\v0)
 disp('Anteile sin-Terme')
 tv=0:0.1:10;
 xv = V(:,1)*( a(1)*cos(w(1)*tv) + b(1)*sin(w(1)*tv) )+...
-    V(:,2)*( a(2)*cos(w(2)*tv) + b(2)*sin(w(2)*tv) )+...
-    V(:,3)*( a(3)*cos(w(3)*tv) + b(3)*sin(w(3)*tv) ) ;
+     V(:,2)*( a(2)*cos(w(2)*tv) + b(2)*sin(w(2)*tv) )+...
+     V(:,3)*( a(3)*cos(w(3)*tv) + b(3)*sin(w(3)*tv) ) ;
 plot(tv,xv,'lineWidth',2)
 
 z =input('Starte Animation ');

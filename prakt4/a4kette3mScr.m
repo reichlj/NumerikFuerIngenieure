@@ -18,8 +18,8 @@ a = V\x0
 b = (1./w) .* (V\v0)
 disp('Anteile sin-Terme')
 tv=0:0.1:10;
-xv = V(:,1)*( a(1)*cos(w(1)*tv) + b(1)*sin(w(1)*tv) )+...
-    V(:,2)*( a(2)*cos(w(2)*tv) + b(2)*sin(w(2)*tv) );
+xv = V(:,1)*( a(1)*cos(w(1)*tv) + b(1)*sin(w(1)*tv) ) +...
+     V(:,2)*( a(2)*cos(w(2)*tv) + b(2)*sin(w(2)*tv) );
 plot(tv,xv,'lineWidth',2)
 
 z =input('Starte Animation ');
@@ -33,7 +33,7 @@ disp('******************************************');
 % Animation auf dem Bildschirm anzeigen
 while(t<30)
   % Auslenkung zur Zeit t berechnen
-  x = V(:,1)*( a(1)*cos(w(1)*t) + b(1)*sin(w(1)*t) )+...
+  x = V(:,1)*( a(1)*cos(w(1)*t) + b(1)*sin(w(1)*t) ) +...
       V(:,2)*( a(2)*cos(w(2)*t) + b(2)*sin(w(2)*t) );
   % aktuelle Position zeichnen
   plot([x(1)+1 x(2)+4],[0 0],'ro-','MarkerSize',30,'LINEWIDTH',3);

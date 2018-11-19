@@ -1,5 +1,6 @@
 clear
 % Aufgabe 3
+% definiere die Parameter und den Anfangszustand
 cm = 1
 disp('Anfangsauslenkung')
 x0 = [1; -0.5]
@@ -7,19 +8,26 @@ disp('Anfangsgeschwindigkeit')
 v0 = [0; 0]
 disp('Steifigkeitsmatrix')
 SM = [2*cm -cm; -cm 2*cm]
+% löse das Eigenwert- Eigenvektorproblem
 [V,D] = eig(SM);
 w = sqrt(diag(D));
 disp('Eigenvektoren')
 disp(V)
 disp('Eigenfrequenzen')
 disp(w)
+% bestimme die Anteile der Eigenvektoren an der Lösung
 disp('Anteile cos-Terme')
 a = V\x0
-b = (1./w) .* (V\v0)
 disp('Anteile sin-Terme')
+b = (1./w) .* (V\v0)
+% berechne die Auslenkungen der beiden Massen in Abhängigkeit
+% von der Zeit
+% beachte: x ist eine 2*201 Matrix
+% Zeile 1 enthält die Auslenkung von Masse 1
+% Zeile 2 enthält die Auslenkung von Masse 2
 tv=0:0.1:10;
 xv = V(:,1)*( a(1)*cos(w(1)*tv) + b(1)*sin(w(1)*tv) )+...
-    V(:,2)*( a(2)*cos(w(2)*tv) + b(2)*sin(w(2)*tv) );
+     V(:,2)*( a(2)*cos(w(2)*tv) + b(2)*sin(w(2)*tv) );
 plot(tv,xv,'lineWidth',2)
 
 z =input('Starte Animation ');
@@ -44,7 +52,7 @@ while(t <= 30)
   xlim([-1 6])
   ylim([-.5 0.5])
   if t == 0
-     pause(5.0);    
+     pause(5.0); % am Anfang 5 Sekunden warten    
   else
      pause(delta_t);  
   end
