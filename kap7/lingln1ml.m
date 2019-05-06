@@ -1,10 +1,10 @@
 clear 
 format long
-disp('Gleichungssystem : A*x = b')
+disp('Gleichungssystem : A*z = b')
 A = [-1 1; 1 1]
 b = [2; 5]
 disp('Gleichungsystem lösen')
-x = mldivide(A,b)
-disp('Probe: A*x=b')
-b1 = A*x
+z = mldivide(A,b)
+disp('Probe: A*z=b')
+b1 = A*z
 

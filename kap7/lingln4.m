@@ -1,16 +1,16 @@
 clear 
-disp('Gleichungssystem : A*x = b')
+disp('Gleichungssystem : A*z = b')
 A = [-1 1; 1 1; -0.4 1]
 b = [0; 2; 0.3]
 
 disp('Gleichungssystem lösen')
-x = A\b
+z = A\b
 
-disp('Probe: b1=A*x')
-b1=A*x
+disp('Probe: b1=A*z')
+b1=A*z
 
 disp('Gleichungssystem lösen')
-x1 = mldivide(A,b)
+z1 = mldivide(A,b)
 
-disp('Probe: b1=A*x1')
-b1=A*x1
+disp('Probe: b1=A*z1')
+b1=A*z1

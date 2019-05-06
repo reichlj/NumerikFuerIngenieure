@@ -1,6 +1,6 @@
 clear 
 format long
-disp('Gleichungssystem : A*x = b')
+disp('Gleichungssystem : A*z = b')
 A = [-1 1; 1 1]
 b = [2; 5]
 
@@ -8,10 +8,10 @@ disp('Inverse von A berechnen')
 IA = inv(A)
 
 disp('Gleichungsystem lösen')
-x = IA*b
+z = IA*b
 
-disp('Probe: A*x=b')
-b1 = A*x
+disp('Probe: A*z=b')
+b1 = A*z
 
 disp('Probe: ist IA Inverse ?')
 E1 = A*IA
