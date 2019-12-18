@@ -25,5 +25,5 @@ end
 
 % Ergebnis graphisch darstellen
 plot(t,y(:,1),t,y(:,2),'LineWidth',2);
-txt = sprintf('y0=%.2f v0=%.2f w=%.2f d=%.2f',y(1,1),y(1,1),w,d);
+txt = sprintf('y0=%.2f v0=%.2f w=%.2f d=%.2f',y(1,1),y(1,2),w,d);
 title(txt);
