@@ -2,7 +2,6 @@ clear all
 clc
 fl = [ 5 6 7; 8, 9 10];
 r = radius(fl);
-
 disp('** absoluter Fehler **')
 diff = fl - pi*r.*r;
 absFehler = max(abs(diff(:)))
