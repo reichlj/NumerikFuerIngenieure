@@ -4,15 +4,15 @@ z2 = input('Zahl 2 : ');
 z3 = input('Zahl 3 : ');
 if ( z1 > z2 ) 
    if ( z1 > z3 )
-      max = z1;
+      mymax = z1;
    else
-      max = z3;
+      mymax = z3;
    end
 else 
    if ( z2 > z3 )
-      max = z2;
+      mymax = z2;
    else
-      max = z3;
+      mymax = z3;
    end
 end
-fprintf('Maximum = %f\n', max);
+fprintf('Maximum = %f\n', mymax);
