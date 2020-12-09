@@ -1,9 +1,9 @@
 function [dx_dt] = a6_dgl(t,x)
   global w w0 d
   
-  if x(1) > 0
+  if x(2) > 0  % x(2) Geschwindigkeit
       vz = 1;
-  elseif x(1) < 0
+  elseif x(2) < 0
       vz = -1;
   else
       vz = 0;
