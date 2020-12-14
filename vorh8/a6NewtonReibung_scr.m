@@ -1,3 +1,4 @@
+clear all
 global w w0 d
 w0 = sqrt(5);   w = 1;  d = 0.4;
 x0 = 0;
